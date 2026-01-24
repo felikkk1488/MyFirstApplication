@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -8,27 +9,42 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="190dp"
-        android:layout_height="164dp"
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:srcCompat="@drawable/images_fotor_bg_remover_20260117133118"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="43dp" />
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="32dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/initial_text"
+        android:textSize="16sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Бросить"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="341dp" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Нажмите кнопку, чтобы бросить кубик"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="269dp" />
+        android:layout_height="48dp"
+        android:text="@string/roll_button"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="50dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
